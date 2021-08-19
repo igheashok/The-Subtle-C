@@ -3,29 +3,24 @@
 #include <string.h>
 #include <ctype.h>
 
-float average(int total, int scores[]);																	//Prototypes
+float average(int total, int scores[]);										//Prototypes
 int passwordChecker(string password);
 
 
 int main(int argc, string argv[])
 {
 	string a = get_string("Enter the password: ");                                              		//User Input
-    if (passwordChecker(a))
+	if (passwordChecker(a))
 	{
-
-		printf("Initiating process...\n\nHello, %c", toupper(argv[1][0]));								//Greetings
+		printf("Initiating process...\n\nHello, %c", toupper(argv[1][0]));				//Greetings
 		for (int i = 1, j = strlen(argv[1]); i < j; i++)
 		{
 			printf("%c", tolower(argv[1][i]));
 		}
 		printf("\n\n");
-
-
-
-
-	//  	  STARTING OF SCORE CODE    	 //
-
-		int total = get_int("Enter the total number of scores: ");										//User Input For Number Of Scores
+													 //  	  STARTING OF SCORE CODE    	 //
+		
+		int total = get_int("Enter the total number of scores: ");					//User Input For Number Of Scores
 
 		int scores[total];
 		for (int j = 0; j < total; j++)
@@ -33,17 +28,14 @@ int main(int argc, string argv[])
 			scores[j] = get_int("Enter the score: ");
 		}
 		printf("The average is: %.2f\n", average(total, scores));
-	}
-	else
-	{
-		printf("Incorrect Password! Try again.\n");
-	}
+		}
+		else
+		{
+			printf("Incorrect Password! Try again.\n");
+		}
 }
 
-
-
-
-	//			AVERAGE FUNCTION DECLARATION			//
+											//			AVERAGE FUNCTION DECLARATION			//
 
 float average(int total, int scores[])
 {
@@ -55,10 +47,7 @@ float average(int total, int scores[])
 	return sum / (float) total;
 }
 
-
-
-
-	//			PASSWORD FUNCTION DECLARATION				//
+											//			PASSWORD FUNCTION DECLARATION				//
 
 int passwordChecker(string password)
 {
