@@ -35,7 +35,7 @@ int main(int argc, string argv[])
 
 
 
-	//  	  STARTING OF SCORE CODE    	 //
+	 //  	  STARTING OF SCORE CODE    	 //
 
 		int total = get_int("Enter the total number of scores: ");							//User Input For Number Of Scores
 
